@@ -1,0 +1,456 @@
+Field,Source,Definition,is_feature,manual_lookup,make_binary,mark_missing,bin_categoricals,impute_missing,encode_categoricals
+INSURED_GENDER,atlas,gender of insured,1,1,0,0,0,missing,ohe
+RSK_SGMT_CD,edw.plcy_trm_vw ,risk segment code,1,1,0,0,0,missing,ohe
+RTNG_GNDR_CD_NIN,edw.drvr_vw,named insured gender,1,1,0,0,0,missing,ohe
+RTNG_GNDR_CD_SIN,edw.drvr_vw,secondary insured gender,1,1,0,0,0,missing,ohe
+CLAIMID,atlas,ID for claim ,0,0,0,0,0,0,0
+CLAIMNUMBER,atlas,claim number,0,0,0,0,0,0,0
+POLICYNUMBER,tbd,tbd,0,0,0,0,0,0,0
+CLAIM_OPEN_TIME,atlas,claim opened time,0,0,0,0,0,0,0
+TP_CLAIM_UPDATETIME,tbd,tbd,0,0,0,0,0,0,0
+TP_SOURCE_UPDATETIME,tbd,tbd,0,0,0,0,0,0,0
+TP_SOURCE_ID,tbd,tbd,0,0,0,0,0,0,0
+EXT_GEICOACCIDENTTYPE,atlas,accident type,1,0,0,0,1,0,ohe
+FAULT,atlas,fault,1,0,0,0,0,mean,0
+LOSSCAUSE,atlas,"cause of accident, similar to geicoaccidenttype, but less granular. ",1,0,0,0,0,missing,ohe
+LOSSZIP,atlas,zip code of loss location,1,0,0,0,0,missing,0
+LOSS_ADDRESS1,atlas,address line 1 of loss location,0,0,0,0,0,missing,0
+LOSS_ADDRESS2,atlas,address line 2 of loss location,0,0,0,0,0,missing,ohe
+LOSS_ADDRESS3,atlas,tbd,0,0,0,0,0,missing,ohe
+LOSS_CITY,atlas,city of loss location,0,0,0,0,0,missing,0
+LOSS_COUNTY,atlas,county of loss location,0,0,0,0,0,missing,0
+LOSS_DATETIME,atlas,datetime of loss ,1,0,0,0,0,0,0
+LOSS_STATE,atlas,state of loss,1,0,0,0,0,missing,0
+POLICE_ON_SCENE,atlas,whether police was on the scene,1,0,0,0,0,0,ohe
+POLICE_REPORT_TAKEN,atlas,whether a police report was taken,1,0,0,0,0,0,ohe
+REPORTEDBYTYPE,atlas,who reported the claim,1,0,0,0,1,missing,0
+REPORTED_INET,atlas,whether it was reported via the internet,1,0,0,0,0,0,0
+REPORT_PURPOSE_ONLY,atlas,whether the claim was for reporting purposes only,0,0,0,0,0,0,ohe
+STATE,atlas,the state of the claim,1,0,0,0,0,0,ohe
+SUIT_RECEIVED,atlas,whether a suit was received,1,0,0,0,0,0,ohe
+UNDW_REFERRAL_REQ,atlas,whether an underwriting referral was requested,1,0,0,0,0,0,ohe
+EXPOSURE_PROPERTY,tbd,tbd,1,0,0,0,0,0,0
+EXPOSURE_INJURY,tbd,tbd,1,0,0,0,0,0,0
+EXPOSURE_OTHER,tbd,tbd,1,0,0,0,0,0,0
+EXPOSURE_PARTY3,tbd,tbd,tbd,0,0,0,0,0,0
+ENDORSED_PRIOR_TO_LOSS,tbd,tbd,1,0,0,0,0,0,0
+ENDORSED_SINCE_LOSS,tbd,tbd,1,0,0,0,0,0,0
+LOSS_WITHIN_20_DAYS,tbd,tbd,1,0,0,0,0,0,0
+LOSS_WITHIN_55_DAYS,tbd,tbd,1,0,0,0,0,0,0
+TLC_OUTPUT_MAIN,atlas,total loss calculator output,0,0,0,0,0,missing,ohe
+TOTALLOSS_MAIN,atlas,whether total loss,1,0,0,0,0,missing,ohe
+VEHICLEDRIVEABLE_MAIN,atlas,whether vehicle is driveable,1,0,0,0,0,missing,ohe
+VEHICLEID_MAIN,atlas,id for vehicle,0,0,0,0,0,missing,0
+VEHICLETYPE_CODE_MAIN,atlas,"code for vehicle type: private passenger, motorcyle, etc. ",1,0,0,0,1,missing,ohe
+VEHICLETYPE_MAIN,atlas,"how the vehicle is related to insured, ex: insuredowned, leased, new, etc. ",1,0,0,0,0,missing,ohe
+VEHICLEUSEREASON_MAIN,atlas,"reason for vehicle use, e.x. business, pleasure, etc. ",1,0,0,0,1,missing,ohe
+VEHICLE_MAKE_MAIN,atlas,vehicle make,1,0,0,0,1,missing,0
+VEHICLE_MODEL_MAIN,atlas,vehicle model,1,0,0,0,0,missing,0
+VEHICLE_YEAR_MAIN,atlas,vehicle year,1,1,0,0,0,mean,0
+VEH_INCIDENT_MAIN,atlas,id for vehicle incident,0,0,0,1,0,missing,0
+DMG_MAIN_GLASSPASSSIDERV,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_SWINGARM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_NOTSAFETODRIVE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_WATERUPTOSEATS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSDRIVERSIDEFD,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_FRAME,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIRERIGHTSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_UNKNOWNLOCK,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_OTHERPROTECTIVEGEAR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_TRUNK,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_UNDERCARRIAGE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_PASSSIDEREARDOOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_LIFTGATE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_FRONTSUSPENSION,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSWINDSHIELD,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_OTHERACCESSORIES,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSPASSSIDEFV,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_REARBUMPER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIREDRIVERSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_SINGLEBODYAREADAMAGED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_SPARETIRECARRIER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_DEVICEUSED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_REARGLASS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_DASHBOARD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_FLUIDSLEAKING,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_UNKNOWNTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_DRVREARQTRPANEL,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GRILLE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIRELEFTSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_AWNING,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSDRIVERSIDEFV,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_PASSSIDEFRONTTIRERIM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_LOWERSTORAGECOMP,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_DIDTHEINTERIORFLOOD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSDRIVERSIDERV,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_LOCKS,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_PASSSIDEREARTIRERIM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_DRIVERSIDEFENDER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIREENGINEBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_FRONTBUMPER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENGINE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_SEATSORDASHBOARD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_WINDSHIELD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_AIRBAGSMISSING,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_DRIVERSIDEMIRROR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_DRVFENDSIDEPANELFRONT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSPASSSIDERD,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_DRIVERSIDEFRONTDOOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ELECTRONICEQUIPMENT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_HOODTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_UNDERHOOD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_FORKS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_HANDLEBARS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSPASSSIDEFD,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_SEATSDAMAGED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_SEAT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_HEADLIGHTSTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_PASSSIDELIGHTS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_SUNROOFMOONROOF,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ANYWINDOWONPASSSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIREINTERIOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ROLLOVER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_PASSSIDEFRONTFOOT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_PASSSIDEMIRROR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIREPASSSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_UNKNOWN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_HELMET,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_SUBMERGEDENGINE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_UNDERCARRIAGETOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_DRIVERSIDETAILLIGHT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_INTERIORONLY,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENGINEGUARD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_TAILLIGHTSTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_OTHER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_MULTIBODYAREADAMAGED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_UNDERCARRIAGETIRE,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_GLASSPASSSIDEQ,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_SALTWATER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_LIGHTSSIGNALS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_VEHICLEROLLEDOVER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ANYWINDOWONDRIVERSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_WHEELSTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_PIPESEXHAUST,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_PASSSIDETAILLIGHT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_DRIVERSIDELIGHTS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSBACKGLASS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIREEXTERIOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSDRIVERSIDERD,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_DASHBOARDDAMAGED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_TRUCKBEDTAILGATE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_HOOD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_FRONTWHEEL,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_REARWHEEL,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_SADDLEBAGS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_WINDOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_DRIVERSIDEFRONTTIRERIM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_MAJORCOMPMISSING,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_DOOR,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_PARTMOTORCYCLEBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_VEHICLEPAINT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_DRIVERSIDEREARTIRERIM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIREMOTORCYCLEBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_FRESHWATER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIREINTERIORBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_UNKNOWNTIRE,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_DRIVERSIDEREARDOOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ENTIREEXTERIORBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_WATERUPTODASH,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_FLOORBOARDS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_PASSFENDSIDEPANELFRONT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_AIRBAGS,atlas,flag for damage on main vehicle,1,0,0,1,0,value: 0,0
+DMG_MAIN_SIDECAR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_INTERIORMISSING,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_PASSSIDEFENDER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_PASSREARQTRPANEL,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSDRIVERSIDEQ,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_BUMPERTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_FAIRINGS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_ROOF,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_GLASSOTHER,tbd,tbd,1,0,0,0,0,0,0
+DMG_MAIN_FENDERS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_MAIN_COUNT,tbd,tbd,tbd,0,0,0,0,0,0
+IS_GLASS_MAIN,tbd,tbd,tbd,0,0,0,0,0,0
+DMG_SEC_GLASSPASSSIDERV,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_SWINGARM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_NOTSAFETODRIVE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_WATERUPTOSEATS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSDRIVERSIDEFD,tbd,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_FRAME,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIRERIGHTSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_UNKNOWNLOCK,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_OTHERPROTECTIVEGEAR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_TRUNK,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_UNDERCARRIAGE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_PASSSIDEREARDOOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_LIFTGATE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_FRONTSUSPENSION,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSWINDSHIELD,tbd,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_OTHERACCESSORIES,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSPASSSIDEFV,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_REARBUMPER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIREDRIVERSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_SINGLEBODYAREADAMAGED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_SPARETIRECARRIER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DEVICEUSED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_REARGLASS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DASHBOARD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_FLUIDSLEAKING,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_UNKNOWNTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_DRVREARQTRPANEL,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GRILLE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIRELEFTSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_AWNING,tbd,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSDRIVERSIDEFV,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_PASSSIDEFRONTTIRERIM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_LOWERSTORAGECOMP,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DIDTHEINTERIORFLOOD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSDRIVERSIDERV,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_LOCKS,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_PASSSIDEREARTIRERIM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DRIVERSIDEFENDER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIREENGINEBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_FRONTBUMPER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENGINE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_SEATSORDASHBOARD,tbd,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_WINDSHIELD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_AIRBAGSMISSING,tbd,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DRIVERSIDEMIRROR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DRVFENDSIDEPANELFRONT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSPASSSIDERD,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_DRIVERSIDEFRONTDOOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ELECTRONICEQUIPMENT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_HOODTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_UNDERHOOD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_FORKS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_HANDLEBARS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSPASSSIDEFD,tbd,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_SEATSDAMAGED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_SEAT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_HEADLIGHTSTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_PASSSIDELIGHTS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_SUNROOFMOONROOF,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ANYWINDOWONPASSSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIREINTERIOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ROLLOVER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_PASSSIDEFRONTFOOT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_PASSSIDEMIRROR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIREPASSSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_UNKNOWN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_HELMET,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_SUBMERGEDENGINE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_UNDERCARRIAGETOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_DRIVERSIDETAILLIGHT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_INTERIORONLY,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENGINEGUARD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_TAILLIGHTSTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_OTHER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_MULTIBODYAREADAMAGED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_UNDERCARRIAGETIRE,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_GLASSPASSSIDEQ,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_SALTWATER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_LIGHTSSIGNALS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_VEHICLEROLLEDOVER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ANYWINDOWONDRIVERSIDE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_WHEELSTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_PIPESEXHAUST,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_PASSSIDETAILLIGHT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DRIVERSIDELIGHTS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSBACKGLASS,tbd,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIREEXTERIOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSDRIVERSIDERD,tbd,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DASHBOARDDAMAGED,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_TRUCKBEDTAILGATE,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_HOOD,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_FRONTWHEEL,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_REARWHEEL,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_SADDLEBAGS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_WINDOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_DRIVERSIDEFRONTTIRERIM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_MAJORCOMPMISSING,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DOOR,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_PARTMOTORCYCLEBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_VEHICLEPAINT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_DRIVERSIDEREARTIRERIM,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIREMOTORCYCLEBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_FRESHWATER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIREINTERIORBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_UNKNOWNTIRE,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_DRIVERSIDEREARDOOR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ENTIREEXTERIORBURN,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_WATERUPTODASH,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_FLOORBOARDS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_PASSFENDSIDEPANELFRONT,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_AIRBAGS,atlas,flag for damage on secondary vehicle,1,0,0,1,0,value: 0,0
+DMG_SEC_SIDECAR,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_INTERIORMISSING,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_PASSSIDEFENDER,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_PASSREARQTRPANEL,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSDRIVERSIDEQ,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_BUMPERTOW,tbd,tbd,1,0,0,0,0,0,0
+DMG_SEC_FAIRINGS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_ROOF,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_GLASSOTHER,tbd,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_FENDERS,atlas,tbd,1,0,0,0,0,value: 0,0
+DMG_SEC_COUNT,tbd,tbd,tbd,0,0,0,0,0,0
+IS_GLASS_SEC,tbd,tbd,tbd,0,0,0,0,0,0
+TLC_OUTPUT_SECONDARY,atlas,tbd,0,0,0,0,0,missing,ohe
+TOTALLOSS_SECONDARY,atlas,tbd,1,0,0,0,0,missing,ohe
+VEHICLEDRIVEABLE_SECONDARY,atlas,tbd,1,0,0,0,0,missing,ohe
+VEHICLEID_SECONDARY,atlas,tbd,0,0,0,0,0,missing,0
+VEHICLETYPE_CODE_SECONDARY,atlas,tbd,1,0,0,0,1,missing,ohe
+VEHICLETYPE_SECONDARY,atlas,tbd,1,0,0,0,0,missing,ohe
+VEHICLEUSEREASON_SECONDARY,atlas,tbd,1,0,0,0,0,missing,ohe
+VEHICLE_MAKE_SECONDARY,atlas,tbd,0,0,0,0,1,missing,0
+VEHICLE_MODEL_SECONDARY,atlas,tbd,0,0,0,0,0,missing,0
+VEHICLE_YEAR_SECONDARY,atlas,tbd,1,1,0,0,0,mean,0
+VEH_INCIDENT_SECONDARY,atlas,tbd,0,0,0,1,0,missing,0
+INSURED_DOB,atlas,Date of birth of insured,1,0,0,0,0,missing,0
+NUM_CLAIMANTS,atlas,number of claimants,1,0,0,1,0,mean,0
+NUM_DRIVER,atlas,number of drivers,1,0,0,0,0,mean,0
+NUM_PASSENGER,atlas,number of passengers,1,0,0,0,0,mean,0
+VEHCOUNT,atlas,number of vehicles in the claim,1,0,0,0,0,0,0
+REFERRALID,atlas,ID for referral,0,0,0,0,0,missing,0
+ADJUSTERCODE,tbd,tbd,0,0,0,0,0,0,0
+SECTIONCODE,tbd,tbd,0,0,0,0,0,0,0
+PROACTIVE,tbd,tbd,1,0,0,0,0,0,0
+EPOCH_REFERRAL_CREATED,tbd,tbd,tbd,0,0,0,0,0,0
+EPOCH_REFERRAL_ACCEPTED,tbd,tbd,tbd,0,0,0,0,0,0
+EPOCH_REFERRAL_INVESTIGATED,tbd,tbd,tbd,0,0,0,0,0,0
+COUNT_POLICY,tbd,tbd,tbd,0,0,0,0,0,0
+COUNT_REFERRAL,tbd,tbd,tbd,0,0,0,0,0,0
+ACCEPTED,tbd,tbd,tbd,0,0,0,0,0,0
+FRAUD,tbd,tbd,tbd,0,0,0,0,0,0
+CLM_NB,tbd,tbd,0,0,0,0,0,0,0
+CLM_NB,edw.clm_plcy_xrfrnc_vw,claim number,0,0,0,0,0,0,0
+SAMPLE_TIME,tbd,tbd,0,0,0,0,0,0,0
+PLCY_NB,edw.plcy_trm_vw ,policy number,0,0,0,1,0,missing,0
+PLCY_KY,edw.clm_plcy_xrfrnc_vw,policy key,0,0,0,0,0,0,0
+PLCY_EVNT_KY,edw.clm_plcy_xrfrnc_vw,policy event key,0,0,0,0,0,0,0
+ACNTG_BGN_DT,tbd,tbd,0,0,0,0,0,0,0
+CRPRTN_YR_CN,edw.plcy_trm_vw ,Tenure,1,0,0,0,0,mean,0
+PLCY_TRM_EFCTV_DT,edw.plcy_trm_vw ,policy term effective date,0,0,0,0,0,missing,0
+PLCY_TRM_EXPRTN_DT,edw.plcy_trm_vw ,policy term expiration date,0,0,0,0,0,missing,0
+RT_STRCTR_CD,edw.plcy_trm_vw ,old or new rating structure,0,0,0,0,0,missing,ohe
+HSHLD_CMPST_CD,edw.plcy_trm_vw ,code taking into account number of vehicles and operators on a policy,1,0,0,0,1,missing,0
+ACDNT_FRGVNS_PRCHS_ELGBL_IN,edw.plcy_trm_vw ,eligible to purchase accident forgiveness,1,1,0,0,0,missing,ohe
+ACDNT_FRGVNS_PRCHS_ELGBL_IN,edw.plcy_trm_vw ,eligible to purchase accident forgiveness,1,1,0,0,0,missing,ohe
+ACDNT_FRGVNS_PRCHS_OPTN_CD,edw.plcy_trm_vw ,has purchased accident forgiveness,1,1,0,0,0,missing,ohe
+ACDNT_FRGVNS_PRCHS_OPTN_CD,edw.plcy_trm_vw ,has purchased accident forgiveness,1,1,0,0,0,missing,ohe
+ACDNT_FRGVNS_PRCHS_OPTN_CD,edw.plcy_trm_vw ,has purchased accident forgiveness,1,1,0,0,0,missing,ohe
+ELCTNC_PLCY_CD,edw.plcy_trm_vw ,policy declaration packages by electronic mail,1,0,0,0,0,missing,ohe
+PLCY_OCPTN_CD,edw.plcy_trm_vw ,GEICO version of occupational job title,1,0,0,0,1,missing,0
+OASIS_LOB_CD,edw.plcy_trm_vw ,Oasis line of business code,1,0,0,0,1,missing,ohe
+RTD_ST_CD,edw.plcy_trm_vw ,Rated state of the policy,1,0,0,0,0,missing,0
+PLCY_RTD_TRTRY_CD,edw.plcy_trm_vw ,Policy rated territory code,0,0,0,0,1,missing,0
+RTNG_TR_CD,edw.plcy_trm_vw ,rating tier code,0,0,0,0,1,missing,ohe
+CMPNY_CD,edw.plcy_trm_vw ,company code,0,0,0,0,0,missing,ohe
+TRT_IN,edw.plcy_trm_vw ,"subject to legal limitations associated with acceptance of tort, state dependent",0,0,0,0,0,missing,ohe
+GDR_SL_CD,edw.plcy_trm_vw ,"Type of sale made by geico direct representative, phone, walk in, non-GDR",0,0,0,0,0,missing,ohe
+INTRNT_SL_IN,edw.plcy_trm_vw ,policy added through internet application,1,0,0,0,0,missing,ohe
+PRDCT_MIX_CD,edw.plcy_trm_vw ,"Product mix, e.g. motorcycle with atv",?,0,0,0,0,missing,ohe
+ROW_NB_S1,tbd,tbd,tbd,0,0,0,0,0,0
+LS_DT,tbd,tbd,1,0,0,0,0,0,0
+LS_RPRTD_DT,tbd,tbd,1,0,0,0,0,0,0
+SRC_PLCY_LCTN_ID,tbd,tbd,?,0,0,0,0,0,0
+UPDT_TM,tbd,tbd,0,0,0,0,0,0,0
+GG_CLM_ID,tbd,tbd,0,0,0,0,0,0,0
+SRC_VHCL_RSK_UNT_ID,tbd,tbd,0,0,0,0,0,0,0
+SRC_PLCY_ID,tbd,tbd,0,0,0,0,0,0,0
+CLM_ROW_NB,tbd,tbd,tbd,0,0,0,0,0,0
+DRVR_APC_PNT_CN_NIN,edw.drvr_vw,total number of apc points,1,0,0,0,0,mean,0
+DRVR_APC_PNT_CN_SIN,edw.drvr_vw,total number of apc points,1,0,0,1,0,mean,0
+DRVR_CNVCTN_PNT_CN_NIN,edw.drvr_vw,conviction points,1,0,0,0,0,mean,0
+DRVR_CNVCTN_PNT_CN_SIN,edw.drvr_vw,conviction points,1,0,0,0,0,mean,0
+DRVR_ACDNT_PNT_CN_NIN,edw.drvr_vw,accident points,1,0,0,0,0,mean,0
+DRVR_ACDNT_PNT_CN_SIN,edw.drvr_vw,accident points,1,0,0,0,0,mean,0
+DRVR_IXPRCD_OPRTR_PNT_CN_NIN,edw.drvr_vw,inexperience points,1,0,0,0,0,mean,0
+DRVR_IXPRCD_OPRTR_PNT_CN_SIN,edw.drvr_vw,inexperience points,1,0,0,0,0,mean,0
+RTD_DRVR_AG_NB_NIN,edw.drvr_vw,named insured age,1,1,0,0,0,mean,0
+RTD_DRVR_AG_NB_SIN,edw.drvr_vw,secondary insured age,1,1,0,0,0,mean,0
+RTNG_MRTL_STS_CD_NIN,edw.drvr_vw,named insured marital status,1,0,0,0,0,missing,ohe
+RTNG_MRTL_STS_CD_SIN,edw.drvr_vw,secondary insured marital status,1,0,0,0,0,missing,ohe
+RTNG_OCPTN_CD_NIN,edw.drvr_vw,named insured occupation code,1,0,0,0,1,missing,0
+RTNG_OCPTN_CD_SIN,edw.drvr_vw,secondary insured occupation code,1,0,0,0,1,missing,0
+DRVNG_EXPRNC_YR_CN_NIN,edw.drvr_vw,named insured driving experience  in years,1,1,0,0,0,mean,0
+DRVNG_EXPRNC_YR_CN_SIN,edw.drvr_vw,secondary insured driving experience  in years,1,1,0,0,0,mean,0
+RSDNT_CHLD_RTNG_IN_NIN,edw.drvr_vw,child resides with driver,1,0,0,0,0,missing,ohe
+RSDNT_CHLD_RTNG_IN_SIN,edw.drvr_vw,child resides with driver,1,0,0,0,0,missing,ohe
+DRVR_OCRNC_NB_NIN,edw.drvr_vw,number of occurences.  What counts as an occurence?,1,0,0,0,0,missing,ohe
+DRVR_OCRNC_NB_SIN,edw.drvr_vw,number of occurences.  What counts as an occurence?,1,0,0,0,0,missing,ohe
+DRVR_RSD_WTH_INSRD_CD_NIN,edw.drvr_vw,driver resides with insured,1,0,0,0,0,missing,ohe
+DRVR_RSD_WTH_INSRD_CD_SIN,edw.drvr_vw,driver resides with insured,1,0,0,0,0,missing,ohe
+GD_DRVR_CD_NIN,edw.drvr_vw,eligibility of good driver discount,1,0,0,0,0,missing,ohe
+GD_DRVR_CD_SIN,edw.drvr_vw,eligibility of good driver discount,1,0,0,0,0,missing,ohe
+EDCTN_LVL_CD_NIN,edw.prty_vw,named insured education level code,1,0,0,0,0,missing,ohe
+EDCTN_LVL_CD_SIN,edw.prty_vw,secondary insured education level code,1,0,0,0,0,missing,ohe
+OWN_RNT_HM_NIN,edw.prty_vw,own or rent home indicator,1,0,0,0,0,missing,ohe
+OWN_RNT_HM_SIN,edw.prty_vw,own or rent home indicator,1,0,0,0,0,missing,ohe
+UMBRL_RFRL_CD_NIN,edw.prty_vw,last umbrella cross sell action on policy,1,1,0,0,0,missing,ohe
+UMBRL_RFRL_CD_SIN,edw.prty_vw,last umbrella cross sell action on policy,1,1,0,0,0,missing,ohe
+NUM_DRIVERS,edw.drvr_vw,count of distinct party keys,1,0,0,0,0,mean,0
+NUM_ACTV_DRIVERS,edw.drvr_vw,number of active drivers on the policy,1,0,0,0,0,mean,0
+NUM_VEHS,edw.vhcl_vw,count of distinct vehicle keys,1,0,0,0,0,mean,0
+RSK_UNT_NB,tbd,tbd,0,0,0,0,0,0,0
+MRT_CD,edw.vhcl_vw ,merit code- summary of surcharge points calculated by APC,1,0,0,0,1,missing,0
+VHCL_GD_DRVR_CD,edw.vhcl_vw ,good driver,1,0,0,0,0,missing,ohe
+LBLTY_SYMBL_CD,edw.vhcl_vw ,code for symbol used to rate liability coverages,1,0,0,0,1,missing,ohe
+LBLTY_SYMBL_OVRD_CD,edw.vhcl_vw ,reason the symbol was overriden,1,0,0,0,0,missing,ohe
+PD_SYMBL_CD,edw.vhcl_vw ,"code assigned to vehicle, based on its characteristics- varies by state and overtime!",1,0,0,0,1,missing,0
+VHCL_APC_PNT_CN,edw.vhcl_vw ,points assigned to vehicle by automated point calc,1,0,0,0,0,mean,0
+ESTMTD_ANL_MLG_NB,tbd,tbd,1,0,0,0,0,mean,0
+USE_CD,edw.vhcl_vw ,"use code, e.g. pleasure, short commute, etc.",1,0,0,0,1,missing,ohe
+MK_CD,edw.vhcl_vw ,make,0,0,0,0,1,missing,0
+MDL_CD,edw.vhcl_vw ,model,0,0,0,0,0,missing,0
+MDL_YR_NB,edw.vhcl_vw ,model year,0,1,0,0,0,mean,0
+MBI_GRP_CD,edw.vhcl_vw ,mechanical breakdown insurance group,?,0,0,0,1,missing,ohe
+RGSTRD_ST_CD,edw.vhcl_vw ,registered state,1,1,0,0,0,missing,0
+MLTI_CAR_DSCNT_IN,edw.vhcl_vw ,multicar discount,1,0,0,0,0,missing,ohe
+WRK_DY_DRV_CN,edw.vhcl_vw ,number of days driven to work,1,0,0,0,0,mean,0
+WRK_MLG_CN,edw.vhcl_vw ,"number of miles driven to work, one way",1,0,0,0,0,mean,0
+RTD_OPRTR_TYP_CD,edw.vhcl_vw ,"principal, part time or excess operator",1,0,0,0,0,missing,ohe
+DYTM_RUN_LGHT_IN,edw.vhcl_vw ,daytime running lights,1,0,0,0,0,missing,ohe
+EXCS_VHCL_IN,edw.vhcl_vw ,excess vehicle- has no driver assigned to it,1,0,0,0,0,missing,ohe
+PRNCPL_RSN_DRVN_CD,edw.vhcl_vw ,"primary reason vehicle is driven- business, farm, federal, personal, etc",1,0,0,0,0,missing,ohe
+HGH_THFT_VHCL_CD,edw.vhcl_vw ,high theft vehicle code,1,1,0,0,0,missing,ohe
+VIN_NB,tbd,tbd,0,0,0,0,0,0,0
+NUM_COVERAGES,edw.vhcl_cvrg,number of coverages in effect on the policy,1,0,0,0,0,value: 8,0
+ALL_COV_TERM_PREM,edw.prm,total premium,1,0,0,1,0,mean,0
+BI_TERM_PREM,edw.prm,premium associated with bodily injury,1,0,0,0,0,mean,0
+BI_LIMIT,edwusb.u41p23.limit_lookup_table,bodiliy injury limits,1,0,0,0,1,missing,ohe
+COMP_TERM_PREM,edw.prm,premium associated with comprehensive,1,0,0,0,0,mean,0
+COMP_DED,edwusb.u41p23.ded_lookup_table,comprehensive limits,1,1,0,0,0,missing,0
+PD_TERM_PREM,edw.prm,premium associated with property damage,1,0,0,0,0,mean,0
+PD_LIMIT,edwusb.u41p23.limit_lookup_table,property damage limits,1,0,0,0,1,missing,ohe
+COLL_TERM_PREM,edw.prm,premium associated with collision,1,0,0,0,0,mean,0
+COLL_DED,edwusb.u41p23.ded_lookup_table,collision limits,1,1,0,0,0,missing,0
+MP_TERM_PREM,edw.prm,premium associated with mp,1,0,0,0,0,mean,0
+MP_LIMIT,edwusb.u41p23.limit_lookup_table,mp limits,1,0,0,0,1,missing,ohe
+ERS_TERM_PREM,edw.prm,premium associated with emergency road service,1,0,0,0,0,mean,0
+ERS_LIMIT,edwusb.u41p23.limit_lookup_table,emergency road service limits,1,0,0,0,0,missing,ohe
+PIP_TERM_PREM,edw.prm,premium associated with personal injury protection,1,0,0,0,0,mean,0
+PIP_DED,edwusb.u41p23.ded_lookup_table,personal injury protection deductable,1,1,0,0,0,missing,0
+PIP_LIMIT,edwusb.u41p23.limit_lookup_table,personal injury protection limits,1,0,0,0,1,missing,ohe
+APIP_TERM_PREM,edw.prm,premium associated with apip,1,0,0,0,0,mean,0
+APIP_DED,edwusb.u41p23.ded_lookup_table,apip deductables,1,1,0,0,0,missing,ohe
+APIP_LIMIT,edwusb.u41p23.limit_lookup_table,apip limits,1,0,0,0,1,missing,ohe
+RR_TERM_PREM,edw.prm,premium associated with rental reimbursement,1,0,0,0,0,mean,0
+RR_LIMIT,edwusb.u41p23.limit_lookup_table,rental reimbursement limits,1,0,0,0,1,missing,ohe
+MBI_TERM_PREM,edw.prm,premium associated with mechanical breakdown insurance,1,0,0,0,0,mean,0
+MBI_DED,edwusb.u41p23.ded_lookup_table,mechanical breakdown insurance deductable,1,1,0,0,0,missing,ohe
+PAST_CLAIM_COUNT,tbd,tbd,1,0,0,0,0,0,0
+PAST_PD_TTL,tbd,tbd,1,0,0,0,0,0,0
+PAST_COMP_TTL,tbd,tbd,1,0,0,0,0,0,0
+PAST_COLL_TTL,tbd,tbd,1,0,0,0,0,0,0
+PAST_PIP_TTL,tbd,tbd,1,0,0,0,0,0,0
+PAST_APIP_TTL,tbd,tbd,1,0,0,0,0,0,0
+PAST_MP_TTL,tbd,tbd,1,0,0,0,0,0,0
+PAST_BI_TTL,tbd,tbd,1,0,0,0,0,0,0
+PAST_MBI_TTL,tbd,tbd,1,0,0,0,0,0,0
+PAST_OTHR_TTL,tbd,tbd,1,0,0,0,0,0,0
+DLQNCY_MTH_CN,tbd,tbd,1,0,0,0,0,0,0
+BL_DLQNCY_AM_MAX,tbd,tbd,1,0,0,0,0,0,0
+RMNNG_BLNC_PRC,tbd,tbd,1,0,0,0,0,0,0
+TARGET_REFERRED,tbd,tbd,1,0,0,0,0,0,0
+TARGET_ACCEPTED,tbd,tbd,1,0,0,0,0,0,0
+TARGET_FRAUD,tbd,tbd,1,0,0,0,0,0,0
