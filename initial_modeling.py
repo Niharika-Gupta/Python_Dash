@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------------------------
-# Author: cgarcia
+#
 # Creation Date: 5.31.2018
-# About: This provides a quick first look at theGeico Fraud data. Part I looks at univariate
+# About: This provides a quick first look. Part I looks at univariate
 #        feature importance by separating into positive and negative instances
 #        for each target, and then ranking by p-values. Part II builds and tunes
 #        3 models tolerant of high-dimensional feature sets and compares the results
